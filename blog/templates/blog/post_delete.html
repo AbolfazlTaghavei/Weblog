@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+
+
+{% block title %}
+    Delete Post
+{% endblock title %}
+    
+
+{% block content %}
+    <div class="container">
+        <div class="card shadow my-3 p-5">
+                <h1>Are you sure?</h1>
+            <p>Are you sure? you want to delete "{{ post.title }}" post peremenently?</p>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="submit" value="Yes, Delete" class="btn btn-danger">
+                <a  href="{% url 'posts_list' %}" class="btn btn-sm btn-success">No, Back to blog</a>
+            </form>
+        </div>
+    <div>
+    
+{% endblock content %}
