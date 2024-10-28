@@ -131,3 +131,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL  = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+# Celery Configuration Options
+
+BROKER_URL = 'redis://:a*********3t@tommy.iran.liara.ir:34470/0'
+CELERY_RESULT_BACKEND = 'redis://:a*********3t@tommy.iran.liara.ir:34470/0'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Tehran'
