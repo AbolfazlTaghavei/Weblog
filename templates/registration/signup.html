@@ -1,14 +1,62 @@
-{% extends '_base.html' %}
-
-{% block title %}Signup{% endblock title %}
-
+{% extends '_base.html' %} {% block title %}Signup{% endblock title %}
+<!-- block -->
 {% block content %}
-    <div class="container mt-3">
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-success">Signup</button>
-        </form>
+<section class="">
+    <!-- container -->
+    <div class="container">
+        <div class="h-screen flex items-center justify-center">
+            <!-- wrapper -->
+            <div
+                class="relative rounded-xl overflow-hidden border border-solid border-white/10"
+            >
+                <!-- form -->
+                <form
+                    class="p-5 w-96 bg-gray-700/10 backdrop-blur-md space-y-3"
+                >
+                    <input
+                        class="w-full h-10 px-3 rounded-xl border-none outline-none capitalize text-sm"
+                        type="text"
+                        placeholder="enter your user name"
+                    />
+                    <input
+                        class="w-full h-10 px-3 rounded-xl border-none outline-none capitalize text-sm"
+                        type="text"
+                        placeholder="enter your full name"
+                    />
+                    <input
+                        class="w-full h-10 px-3 rounded-xl border-none outline-none capitalize text-sm"
+                        type="text"
+                        placeholder="enter your password"
+                    />
+                    <input
+                        class="w-full h-10 px-3 rounded-xl border-none outline-none capitalize text-sm"
+                        type="text"
+                        placeholder="enter your email"
+                    />
+                    <p class="text-white text-sm">
+                        If you are already registered
+                        <a
+                            class="text-yellow-500 hover:text-yellow-600 transition-colors"
+                            href="{% url 'login' %}"
+                        >
+                            signin
+                        </a>
+                    </p>
+                    <input
+                        type="submit"
+                        value="Register"
+                        class="w-full bg-yellow-500 hover:bg-yellow-600 hover:scale-95 cursor-pointer transition-all text-center h-10 rounded-xl"
+                    />
+                </form>
+                <!-- shapes -->
+                <div
+                    class="absolute top-0 left-0 size-14 bg-green-500 blur-2xl -z-10"
+                ></div>
+                <div
+                    class="absolute bottom-0 right-0 size-14 bg-red-500 blur-2xl -z-10"
+                ></div>
+            </div>
+        </div>
     </div>
+</section>
 {% endblock content %}
-    
